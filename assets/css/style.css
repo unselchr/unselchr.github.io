@@ -1,0 +1,160 @@
+
+h1{
+    font-size: 50px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+h2{
+    clear:both;
+    font-size: 30px;
+    color:#4aaaa5;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+.headerLink{
+    float: right;
+    color:darkgrey;
+    padding:10px;
+    margin:auto;
+}
+.headerLink:hover{
+    background-color:darkslategray;
+}
+#name{
+    float:left;
+    color:white !important;
+    background-color:#4aaaa5;
+    margin-left:14%;
+    padding:10px;
+}
+body{
+    background: url(../images/circles-light.png);
+}
+header{
+    height:49.6px;
+    background-color:white;
+    border-bottom:1px;
+    border-bottom-color:darkgrey;
+    border-bottom-style:solid;
+}
+.textBox{
+    clear:both;
+    float:below;
+    background-color:white;
+    width: 70%;
+    margin:auto;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding:10px;
+    position:absolute;
+    margin-left:14%
+}
+p{
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    float:above;
+    margin:10px;
+    line-height:1.5;
+}
+#bioPic{
+    float:left;
+    float:above;
+    margin-right:10px;
+}
+.boxTitle{
+    padding:15px;
+    border-bottom:2px;
+    border-bottom-color:#dddddd;
+    margin-bottom:10px;
+    border-bottom-style:solid;
+
+}
+footer{
+    background-color:#666666;
+    color:white;
+    width:100%;
+    height:6%;
+    border-top:5px;
+    border-top-color:teal;
+    border-top-style:solid;
+    position: fixed;
+    bottom:0;
+    text-align:center;
+    font-size:80%;
+}
+#copy{
+    margin-top:20px;
+}
+.portfolioItem{
+    margin:15px;
+    height:300px;
+    width:300px;
+    float:left;
+}
+.portfolioItemImg{
+    height:300px;
+    width:300px;
+    z-index: 0;
+    position:absolute;
+    border:1px;
+    border-style:solid;
+    border-color:darkgrey;
+}
+.portfolioItemLabel{
+    position:absolute;
+    width:302px;
+    height:40px;
+    text-align:center;
+    color:white;
+    background-color:teal;
+    padding-top:20px;
+    margin-top:230px;
+}
+.largeBox{
+    width:100%;
+    height:300px;
+
+}
+.button{
+    background-color:teal;
+    color:white;
+    padding:7px;
+    border:0px;
+    margin-top:5px;
+}
+
+
+
+@media only screen and (max-width:640px){
+    .textBox{
+        max-width:500px;
+    }
+    .headerLink{
+        float: left;
+    }
+    header{
+        height:100px;
+    }
+    #name{
+        width:100%;
+        border:0px;
+        margin:0px;
+        text-align:center;
+    }
+    .portfolioItem{
+        width:90%;
+    }
+    .portfolioItemImg{
+        width:90%;
+    }
+    .portfolioItemLabel{
+        width:90%;
+    }
+};
+@media only screen and (min-width: 768px) {
+    .textBox{
+        max-width:550px;
+    }
+};
+@media only screen and (min-width:980){
+    .textBox{
+        max-width:600px;
+    }
+};
