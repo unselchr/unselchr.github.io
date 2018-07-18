@@ -16,7 +16,7 @@ h2{
     margin:auto;
 }
 .headerLink:hover{
-    background-color:darkslategray;
+    background-color:grey;
 }
 #name{
     float:left;

@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>contact</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
 </head>
 <body>
     <header>
@@ -19,15 +22,54 @@
     </header>
     <div class="textBox">
         <h2 class="boxTitle">Contact</h2>
-        <form action="/action_page.php">
-            Name: <input required placeholder="your name" type="text" name="fname"><br>
-            Email: <input required placeholder="email@domain.com" type="text" name="email"><br>
-            Message: <input class="largeBox" required type="text" name="message"><br>
-            <input class="button" type="submit" value="Submit">
-          </form>
+        <form>
+            <div class="form-group">
+                <label for"nameInput">Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email@domain.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea type="text" id="message" class="form-control" rows="5"></textarea>
+            </div>
+            <button type="submit" class="button" id="submitInfo">Submit</button>
+            <h5 id="sendConfirm" style="display:none;">Message Sent</h5>
+        </form>
     </div>
     <footer>
         <p id="copy">Copyright ©</p>
     </footer>
 </body>
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDsA7HzBKeG6LU944V_IeRaIxITzfMAvPM",
+    authDomain: "portfolio-beb6c.firebaseapp.com",
+    databaseURL: "https://portfolio-beb6c.firebaseio.com",
+    projectId: "portfolio-beb6c",
+    storageBucket: "portfolio-beb6c.appspot.com",
+    messagingSenderId: "931205861568"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+    var db=firebase.database();
+    $("#submitInfo").on("click",function(event){
+        event.preventDefault();
+        db.ref().push({
+            email:$("#email").val(),
+            message:$("#message").val(),
+            name:$("#nameInput").val(),
+            read:false
+        })
+        $("#submitInfo").css("display","none");
+        $("#sendConfirm").css("display","block");
+    })
+
+</script>
 </html>
