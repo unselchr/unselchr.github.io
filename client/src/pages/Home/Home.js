@@ -7,7 +7,7 @@ import "./Home.css";
 const Home = () => {
     const getSpotifyKey = function(event){
         event.preventDefault();
-        axios.get("/spotify/token",{
+        axios.get("/spotify",{
 
         })
             .then((response)=>console.log(response))//eslint-disable-line
