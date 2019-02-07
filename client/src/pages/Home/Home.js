@@ -23,9 +23,9 @@ const Home = () => {
                     <p>
                         In December of 2018 I started working for HedgeApple Inc. 
                         I work with a small team that manages and improves several large scale ecommerce sites including 
-                        <a href="https://hedgeapple.com/">HedgeApple</a>
+                        <a href="https://hedgeapple.com/"> HedgeApple </a>
                         and
-                        <a href="https://plushrugs.com/">PlushRugs</a>
+                        <a href="https://plushrugs.com/"> PlushRugs </a>
                         .
                         HedgeApple‘s sites are build with Django in a python 3 environment. 
                         In additon to managing the Django sites I write python scripts that load inventory and specifation spreadsheets into our databases for products from dozens of different manufacturers.
