@@ -10,8 +10,8 @@ const Home = () => {
         axios.get("/spotify/token",{
 
         })
-            .then((response)=>console.log(response))
-            .catch((err)=>console.log(err));
+            .then((response)=>console.log(response))//eslint-disable-line
+            .catch((err)=>console.log(err));//eslint-disable-line
     };
     return(
         <div className="container">
