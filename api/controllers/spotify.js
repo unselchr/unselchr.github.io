@@ -8,15 +8,15 @@ module.exports={
                 redirect_uri: "http://chrisunsell.com/",
                 scope: "user-top-read",
             }
-                .then((response)=>{
-                    console.log(response)//eslint-disable-line
-                    res.send(response);
-                })
-                .catch((err)=>{
-                    console.log(err)//eslint-disable-line
-                    res.send(err);
-                })
-        });
+        })
+            .then((response)=>{
+                console.log(response)//eslint-disable-line
+                res.send(response);
+            })
+            .catch((err)=>{
+                console.log(err)//eslint-disable-line
+                res.send(err);
+            })
     },
     getOverview: function(req, res){
         axios.get("https://api.spotify.com/v1/me",{
