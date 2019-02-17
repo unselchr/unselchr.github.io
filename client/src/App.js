@@ -8,6 +8,7 @@ import Portfolio from "./pages/Portfolio";
 
 import Nav from "./components/Nav";
 
+import "./App.css";
 const App = ()=>(
     <Router>
         <div>
@@ -15,7 +16,7 @@ const App = ()=>(
             <Switch>
                 <Route exact path="/"component={Home}/>
                 <Route exact path="/contact" componsent={Contact}/>
-                <Route exact path="/portfilio" component={Portfolio}/>
+                <Route exact path="/portfolio" component={Portfolio}/>
                 <Route component={NoMatch}/>
             </Switch>
         </div>

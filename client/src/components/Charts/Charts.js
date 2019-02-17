@@ -39,7 +39,7 @@ class SteamChart extends React.Component {
             const options = {
                 animationEnabled: true,
                 exportEnabled: true,
-                theme: "light2", //"light1", "dark1", "dark2"
+                theme: "dark1", //"light1", "dark1", "dark2"
                 title: {
                     text: "Steam Activity"
                 },
