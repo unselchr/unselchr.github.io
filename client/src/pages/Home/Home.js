@@ -1,24 +1,14 @@
 import React from "react";
-import axios from "axios";
 
 import {SteamChart, SpotifyChart} from "./../../components/Charts";
 
 import "./Home.css";
-const Home = () => {
-    const getSpotifyKey = function(event){
-        event.preventDefault();
-        axios.get("/spotify",{
-
-        })
-            .then((response)=>console.log(response))//eslint-disable-line
-            .catch((err)=>console.log(err));//eslint-disable-line
-    };
+const Home = () => {  
     return(
         <div className="container">
             <div className="row">
                 <div className="col-12">
                     <h1>About Me</h1>
-                    <button onClick={getSpotifyKey}>Get Spotify Key</button>
                     <hr></hr>
                     <p>
                         My name is Chris Unsell and I am a web developer from Lawrence, KS. 
@@ -59,6 +49,7 @@ const Home = () => {
                     <SteamChart/>
                 </div>
                 <div className="col-12 col-md-6">
+                    <h1>Spotify Top 10</h1>
                     <SpotifyChart/>
                 </div>
             </div>
